@@ -1,0 +1,19 @@
+
+.recent__product
+    //- open class recent product title
+    .recent__product--title
+        div
+        h2 recent product
+        p latest arrivals
+    //- open class recent product content
+    .recent__product--content           
+            include ./component/product.pug 
+            +product('../img/product.jpg','main vintage shirt','£235.50','add to cart')
+            +product('../img/product1.jpg','skater t-shirt','£59.90','add to cart')
+            +product('../img/product2.jpg','white shirt','£15.00 £12.00','add to cart','sale')
+            +product('../img/product3.jpg','special edition hoodie','£32.90','add to cart','sale','bg-special')
+            +product('../img/product4.jpg','special edition women shirt','£89.90','add to cart')
+            +product('../img/product5.jpg','special edition shirt','£432.90','add to cart','sale')
+            +product('../img/product6.jpg','stormer white shirt','£135.00 £89.90','add to cart')
+            +product('../img/product7.jpg','vintage white hoodie','£235.90','add to cart')                 
+            

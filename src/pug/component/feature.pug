@@ -1,0 +1,8 @@
+mixin content(href,name,price1,price2)
+    .content-child
+        figure
+            img(src=href,alt='feature-product')
+        .text
+            h3= name
+            span(style='text-decoration:line-through;text-decoration-color:black')= price1
+            span= price2

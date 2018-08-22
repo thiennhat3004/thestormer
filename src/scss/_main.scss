@@ -1,0 +1,118 @@
+$color-blue:#6bd5f4;
+$color-blackblue:#4d4d4d;
+main{
+    width:87%;
+    margin:0 auto;
+    // open style main left
+    .main__left{
+        width:28%;
+        float:left;
+        display: flex;
+        
+        flex-direction: column;
+        @mixin product{
+            border:1px dashed silver;
+            width: 90%;
+            margin-bottom: 40px;
+        }
+        h2{
+            border-bottom: 2px solid silver;
+            text-transform: uppercase;
+            line-height: 70px;
+            padding-left: 7%;
+            font-size: 0.9em;
+            font-weight: 500;
+        }
+        .content{
+            padding:6%;
+        }
+        @import 'content-child.scss';
+        // open tag product
+        &--feature-product{
+            @include product;
+            
+        }
+        // open categories product
+        &--categories-product{
+            @include product;
+            li{
+                font-weight: 600;
+                padding:1% 0;
+                a:hover{
+                    color: $color-blue;
+                }
+            }
+        }
+        // open product
+        &--product{
+            @include product;
+            
+        }
+        
+        // open tag product
+        &--tag-product{
+            @include product;
+            @import 'tag.scss';
+        }
+
+    }
+    // open style main right
+    .main__right{
+        width:72%;
+        float: left;
+        // open style main right 1
+        &--1{
+            width: 100%;
+            height:70px;
+            display: flex;
+            justify-content: space-between;
+            form{
+                select{
+                    background-color:silver;
+                    height: 50px;
+                }
+            }
+            p{
+                font-weight: 600;
+                line-height: 70px;
+            }
+        }
+        // open style main right 2
+        &--2{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding-bottom: 20px;
+            
+            @import 'component.scss';    
+            
+        }
+    }
+}
+.sale{
+    &:after{
+        content: 'sale!';
+        width: 50px;
+        text-transform: uppercase;
+        height: 50px;
+        font-size: 0.7em;
+        text-align: center;
+        line-height: 50px;
+        background-color:rgba(115, 163, 235, 0.8);
+        color: white;
+        cursor: pointer;
+        position: absolute;
+        top: 2%;
+        left: 3%;
+        border-radius: 25px;
+    }
+}
+.bg-special{
+    background-color: $denxanh;
+    color:white;
+    &:hover{
+        background-color:$xanhlo !important;
+        border-color:$xanhlo !important;
+    }
+}

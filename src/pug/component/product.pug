@@ -1,0 +1,9 @@
+mixin product(file,theH4,theP,theA,sale,bg)
+    .product(class=sale)
+        i.fas.fa-heart
+        a(href='#',title='product')
+            figure
+                img(src=file,alt='product')
+        h4= theH4
+        p= theP   
+        a(href='#',class=bg).thea= theA         

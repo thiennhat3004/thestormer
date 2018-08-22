@@ -1,0 +1,46 @@
+.product{
+    width: 30%;
+    position: relative;
+    i{
+        position: absolute;
+        top: 3%;
+        right: 7%;
+        color: white;
+        display: none;
+
+    }
+    &:hover i{
+        display: block;
+    }
+    figure{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+    h4{
+        text-transform: uppercase;
+        text-align: center;
+        line-height: 30px;
+        font-size: 0.9em;
+    }
+    p{
+        text-align: center;
+        
+    }
+    .thea{
+        padding:7px;
+        border:2px solid $color-blackblue;
+        margin:35px 24%;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 600;
+        font-size: 0.75em;
+        display:block;
+        &:hover{
+            background-color:$color-blackblue;
+            color:white;
+        }
+        
+    }
+} 

@@ -1,0 +1,39 @@
+footer
+    .footer__top
+        h2 our stormer news
+        p subcribe to our newletter and never miss a special offer
+        form(action='#',method='post')
+            input(type='text',placeholder='enter your email address')
+            button subscribe
+    // close footer top
+    .footer__middle
+        .footer__middle--logo
+            figure
+                img(src='../img/logo.png',alt=logo)
+            p     Lorem ipsum dolor sit amet, consec tuer adipiscing elit, sed diam nonum nibh euismod. Lotuer adipiscing elit, sed diam nibh eu.
+        .footer__middle--tag
+            h3 product tags
+            include ./component/tag.pug
+
+        .footer__middle--about
+            h3 about us
+            h4 The Stormer is a vintage Apparel store that focuses on user experience.
+            p <i class='fas fa-phone'></i> (+386) 40 123 456
+            p <i class='far fa-envelope'></i> info@stormy.com
+            p <i class='fas fa-home'></i> www.stormy.com 
+        .footer__middle--feature
+            h3 featured products
+            include ./component/feature.pug
+            +content('../img/feature1.jpg','Grey Stormer Shirt','£235.90','£189.90')
+            +content('../img/feature2.jpg','White Stormer Hoodie','£45.00','£42.00')
+    // close footer middle
+    .footer__bottom
+        h3 visit <img src='../img/footer-dot.png',alt='logo-footer'> the stormer
+        p The.Stormer @2014 by <span>premiumcoding</span> | Powered by : <span>wordpress</span>
+        .footer__bottom--img
+            a(href='#'): img(src='../img/footer1.png',alt='anh-footer')
+            a(href='#'): img(src='../img/footer2.png',alt='anh-footer')
+            a(href='#'): img(src='../img/footer3.png',alt='anh-footer')
+            a(href='#'): img(src='../img/footer4.png',alt='anh-footer')
+            a(href='#'): img(src='../img/footer5.png',alt='anh-footer')
+    // close footer bottom

@@ -1,0 +1,21 @@
+.to__top{
+    width: 55px;
+    height: 55px;
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+    background-color:$xanhlo;
+    display: none;
+    cursor: pointer;
+    &:after{
+        content:'';
+        width: 0;
+        height: 0;
+        border-bottom:11px solid white;
+        border-left:7px solid transparent;
+        border-right:7px solid transparent;
+        position: absolute;
+        top:40%;
+        right: 37%;
+    }
+}

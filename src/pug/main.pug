@@ -1,0 +1,57 @@
+include ./component/product.pug 
+main
+    // open main left
+    .main__left
+        .main__left--feature-product
+            h2 featured products
+            .content
+                include ./component/feature.pug
+                +content('../img/feature1.jpg','Grey Stormer Shirt','£235.90','£189.90')
+                +content('../img/feature2.jpg','White Stormer Hoodie','£45.00','£42.00')
+                +content('../img/feature3.jpg','Stormer White Shirt','£135.00','£89.90')            
+        // close feature product
+        .main__left--categories-product 
+            h2 product categories
+            .content
+                ul
+                    - list = ['Man Hoodies','Man Shirt','Women Hoodies','Women Shirts']
+                    each item in list
+                        li: a(href='#')= item
+        // close categories product
+        .main__left--product
+            h2 product
+            .content
+                +content('../img/productchild1.jpg','Vintage Stormer Shirt','£90.00')            
+                +content('../img/productchild2.jpg','Stormer Vintage Shirt','£39.90','£49.90').            
+                +content('../img/productchild3.jpg','Grey Stormer Shirt','£235.90','£189.90')            
+        // close product
+        .main__left--tag-product
+            h2 product tags
+            include ./component/tag.pug
+    // close main
+    .main__right
+        .main__right--1
+            form
+                select
+                    option Default sorting
+                    option Sort by popularity
+                    option Default newness
+                    option Default price : low to high
+                    option Default price : high to low
+            p Showing all 12 results        
+        // close main right 1
+        .main__right--2                    
+                +product('../img/product.jpg','main vintage shirt','£235.50','add to cart')
+                +product('../img/product1.jpg','skater t-shirt','£59.90','add to cart')
+                +product('../img/product2.jpg','white shirt','£15.00 £12.00','add to cart','sale')
+                +product('../img/product3.jpg','special edition hoodie','£32.90','add to cart')
+                +product('../img/product4.jpg','special edition women shirt','£89.90','add to cart')
+                +product('../img/product5.jpg','special edition shirt','£432.90','add to cart')
+                +product('../img/product6.jpg','stormer white shirt','£135.00 £89.90','add to cart','sale')
+                +product('../img/product7.jpg','vintage white hoodie','£235.90','add to cart')
+                +product('../img/product8.jpg','white stormer hoodie','£45.00 £42.00','read more','sale','bg-special')
+                +product('../img/product9.jpg','grey stormer shirt','£235.90 £189.90','add to cart','sale')
+                +product('../img/product10.jpg','stormer vintage shirt','£39.90 - £49.90','select options')
+                +product('../img/product11.jpg','vinty stormer shirt','£90.00','add to cart')        
+        // close main right 2
+    // close main right 

@@ -1,0 +1,30 @@
+.bg-fix{
+    width: 100%;
+    height: 424px;
+    background: url('../img/bg-fix.jpg') center no-repeat rgba(255,255,255, 0.1);
+    background-attachment: fixed;
+    clear: both;
+    padding:11% 0 11% 0;
+    
+    @mixin theH{
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        
+    }
+    h1{
+        @include theH;
+        
+        font-size: 4em;
+    }
+    h2{
+        @include theH;
+        margin-top: 1%;
+        font-size: 3em;
+    }
+    h3{
+        @include theH;
+        margin-top: 1%;
+        font-size: 2em;
+    }
+}

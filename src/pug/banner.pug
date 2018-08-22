@@ -1,0 +1,53 @@
+.banner#banner
+    nav#menu
+        figure.nav__left
+            a(href='#'): img(src='../img/logo.png',alt='logo')
+        .nav__middle#nav-middle
+            ul
+                li <a>home</a>
+                    ul
+                        - var list1 = ['home full width','home page full width 2','home normal','home minimal store - sidebar','home page default wp'] 
+                            each item in list1
+                                li: a(href='#')= item
+                li <a>shop</a>
+                    ul 
+                        - var list2 = ['shop sidebar combination','shop full width','shop width right sidebar','shop width left sidebar','shop sidebar + catogeries']
+                            each item in list2
+                                li: a(href='#')= item
+                li <a>shop by</a>
+                li <a>blog</a>
+                li <a>portfolio</a>
+                li <a>shortcodes</a>
+                li <a>contact</a>
+        .nav__right#nav-right
+            .nav__right_box
+                .nav__right--text
+                    p item(0)
+                    p &pound;0.00
+                .nav__right--logo
+                    i.fas.fa-shopping-bag
+                #product__cart
+                    p No product in the cart
+        .nav__mobile#nav-mobile
+            div
+            div
+            div
+            ul#mobile
+                - var listIcon = ['home','shop','shop by','blog','portfolio','shortcodes','contact']
+                    each item in listIcon
+                        li: a(href='#')= item                                             
+    .banner__middle
+        h1 hipster
+        h2 clothing
+        h3 assortment
+        figure
+            img(src='../img/logo.png',alt='logobanner')
+
+    header
+        .header__phone.inline
+            p <i class='fas fa-phone' style='transform:scaleX(-1)'></i> do you have any question ? call : <span>+(386) 123 456</span>
+        .header__ship.inline
+            p <i class='fas fa-truck' style='transform:scaleX(-1)'></i> free shipping on<span> all orders over $99</span>
+        .header__mail.inline(style='border-right:none')
+            p <i class='far fa-paper-plane'></i> info@stormer.com
+        input(type='text',placeholder='search')        

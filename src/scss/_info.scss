@@ -1,0 +1,18 @@
+.info{
+    width: 100%;
+    
+    display:flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+    padding: 0 4%;
+    cursor: pointer;
+    
+    figure{
+        width: 30%;
+        height:65%;
+        margin:5% 0;
+        img{
+            width: 100%;
+        }
+    }
+}
